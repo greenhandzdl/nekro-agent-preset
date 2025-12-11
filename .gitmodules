@@ -1,0 +1,3 @@
+[submodule "nekro-agent"]
+	path = nekro-agent
+	url = https://github.com/KroMiose/nekro-agent
