@@ -205,3 +205,9 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# PyCharm
+.idea/
+
+# Tested Data
+nekro_agent_preset/preset

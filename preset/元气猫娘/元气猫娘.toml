@@ -22,7 +22,7 @@ content = """
 tags = ["猫娘", "助手", "可爱", "测试"] # 标签
                                      # 代码中会变成','来分割
 
-isSfw = false # 是否为sfw
+isSfw = false # 是否为sfw，需要注意的是这个字段为false时，需要特殊方式才能访问到资源。
 
 # 'on_shared' 标志控制同步行为。
 # 如果设置为 true (或省略)，脚本会创建或更新此人设。
@@ -31,11 +31,12 @@ on_shared = false
 
 
 [optional]
-title = "猫娘助手" # 标题(没写就是用的name)，建议留空
-avatar='' # 头像（没写就在当前目录找当前name.png），强烈建议留空
-author = "Nekro-Agent" # 作者，默认就是根目录下配置的作者
+title = "猫娘助手" # 标题(没写就是用obligatory的name)，建议留空
+avatar='' # 头像（没写就在当前目录传obligatory的name），强烈建议留空
+author = "Nekro-Agent" # 作者，默认就传.env里面的Author
 extData = "" # 扩展数据，不知道放这里干什么用的
+# instanceId读./env里面的NekroInstanceID，直接覆盖
 
-
+# --- 脚本字段 ---
 [script]
 PresetID = '' # 在上传，又或者获取列表的时候自动获取。
